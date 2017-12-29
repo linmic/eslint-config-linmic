@@ -1,0 +1,37 @@
+{
+  "name": "eslint-config-linmic",
+  "version": "0.0.1",
+  "description": "Linmic's ESLint Config",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:linmic/eslint-config-linmic.git"
+  },
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "config",
+    "javascript",
+    "styleguide"
+  ],
+  "author": "Linmic <linmicya@gmail.com>",
+  "license": "All rights reserved.",
+  "engines": {
+    "node": ">= 4"
+  },
+  "dependencies": {
+    "eslint": "^4.6.1",
+    "eslint-config-airbnb": "^15.1.0",
+    "eslint-plugin-flowtype": "^2.35.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jest": "^21.1.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "^7.3.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.0.0"
+  }
+}

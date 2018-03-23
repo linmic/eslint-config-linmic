@@ -1,10 +1,11 @@
 {
   "name": "eslint-config-linmic",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Linmic's ESLint Config",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "prettify": "prettier --write ./**/*.js"
   },
   "repository": {
     "type": "git",
@@ -32,6 +33,7 @@
     "eslint-plugin-react": "^7.3.0"
   },
   "devDependencies": {
-    "babel-eslint": "^8.0.0"
+    "babel-eslint": "^8.0.0",
+    "prettier": "^1.11.1"
   }
 }

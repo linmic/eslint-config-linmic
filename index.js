@@ -1,42 +1,45 @@
 module.exports = {
-  parser: "babel-eslint",
-  extends: "airbnb",
-  plugins: ["flowtype", "jest"],
+  parser: 'babel-eslint',
+  extends: 'airbnb',
+  plugins: ['flowtype', 'jest'],
   settings: {
-    "import/resolver": {
+    'import/resolver': {
       webpack: {
-        config: "webpack.config.js"
-      }
-    }
+        config: 'webpack.config.js',
+      },
+    },
   },
   rules: {
-    "react/jsx-filename-extension": [1, { extensions: [".js", ".jsx"] }],
-    "jsx-a11y/href-no-hash": "off",
-    "jsx-a11y/anchor-is-valid": ["warn", { aspects: ["invalidHref"] }],
-    "jsx-a11y/aria-role": [
+    'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
+    'jsx-a11y/href-no-hash': 'off',
+    'jsx-a11y/anchor-is-valid': ['warn', { aspects: ['invalidHref'] }],
+    'jsx-a11y/aria-role': [
       2,
       {
-        ignoreNonDOM: true
-      }
+        ignoreNonDOM: true,
+      },
     ],
-    "import/no-unresolved": [2, { caseSensitive: false }],
-    "global-require": 0,
-    "spaced-comment": 0,
-    "react/prop-types": 0,
-    "max-len": 0,
-    "comma-dangle": [
-      "error",
+    'import/no-unresolved': [2, { caseSensitive: false }],
+    'global-require': 0,
+    'spaced-comment': 0,
+    'react/prop-types': 0,
+    'max-len': 0,
+    'comma-dangle': [
+      'error',
       {
-        arrays: "always-multiline",
-        objects: "always-multiline",
-        imports: "always-multiline",
-        functions: "ignore"
-      }
+        arrays: 'always-multiline',
+        objects: 'always-multiline',
+        imports: 'always-multiline',
+        functions: 'ignore',
+      },
     ],
-    "arrow-parens": ["error", "as-needed"],
-    "padding-line-between-statements": [
-      { blankLine: "always", prev: "*", next: "return" }
-    ]
+    'arrow-parens': ['error', 'as-needed'],
+    'padding-line-between-statements': [
+      'error',
+      { blankLine: 'always', prev: ['const', 'let', 'var'], next: '*' },
+      { blankLine: 'always', prev: '*', next: 'return' },
+      { blankLine: 'any', prev: ['const', 'let', 'var'], next: ['const', 'let', 'var'] },
+    ],
   },
   globals: {
     window: true,
@@ -46,9 +49,9 @@ module.exports = {
     Event: true,
     SyntheticEvent: true,
     HTMLButtonElement: true,
-    HTMLInputElement: true
+    HTMLInputElement: true,
   },
   env: {
-    "jest/globals": true
-  }
+    'jest/globals': true,
+  },
 };

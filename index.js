@@ -50,6 +50,18 @@ module.exports = {
     SyntheticEvent: true,
     HTMLButtonElement: true,
     HTMLInputElement: true,
+    /* React FlowTypes */
+    React$Node: false,
+    React$Element: false,
+    React$ChildrenArray: false,
+    React$ComponentType: false,
+    React$StatelessFunctionalComponent: false,
+    React$ElementType: false,
+    React$Key: false,
+    React$Ref: false,
+    React$ElementProps: false,
+    React$ElementConfig: false,
+    React$ElementRef: false,
   },
   env: {
     'jest/globals': true,

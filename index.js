@@ -1,24 +1,24 @@
 module.exports = {
   parser: 'babel-eslint',
-  extends: 'airbnb',
-  plugins: ['flowtype', 'jest'],
+  extends: ['airbnb', 'plugin:testcafe/recommended'],
+  plugins: ['flowtype', 'security', 'jest', 'testcafe'],
   settings: {
     'import/resolver': {
       webpack: {
         config: 'webpack.config.js',
       },
     },
+    'flowtype': {
+      'onlyFilesWithFlowAnnotation': false
+    },
   },
   rules: {
     'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
     'jsx-a11y/href-no-hash': 'off',
     'jsx-a11y/anchor-is-valid': ['warn', { aspects: ['invalidHref'] }],
-    'jsx-a11y/aria-role': [
-      2,
-      {
-        ignoreNonDOM: true,
-      },
-    ],
+    'jsx-a11y/aria-role': [2, { ignoreNonDOM: true }],
+    'flowtype/define-flow-type': 1,
+    'flowtype/use-flow-type': 1,
     'import/no-unresolved': [2, { caseSensitive: false }],
     'global-require': 0,
     'spaced-comment': 0,
@@ -37,33 +37,21 @@ module.exports = {
     'padding-line-between-statements': [
       'error',
       { blankLine: 'always', prev: ['const', 'let', 'var'], next: '*' },
-      { blankLine: 'always', prev: '*', next: 'return' },
       { blankLine: 'any', prev: ['const', 'let', 'var'], next: ['const', 'let', 'var'] },
+      { blankLine: 'always', prev: '*', next: 'return' },
+      { blankLine: 'always', prev: '*', next: ['block-like'] },
+      { blankLine: 'always', prev: 'block-like', next: '*' },
+      { blankLine: 'never', prev: ['case', 'default'], next: 'block-like' },
     ],
+    'no-param-reassign': ['error', { props: false }],
+    'eol-last': ['error', 'always'],
   },
   globals: {
-    window: true,
-    document: true,
-    navigator: true,
-    XMLHttpRequest: true,
-    Event: true,
     SyntheticEvent: true,
-    HTMLButtonElement: true,
-    HTMLInputElement: true,
-    /* React FlowTypes */
-    React$Node: false,
-    React$Element: false,
-    React$ChildrenArray: false,
-    React$ComponentType: false,
-    React$StatelessFunctionalComponent: false,
-    React$ElementType: false,
-    React$Key: false,
-    React$Ref: false,
-    React$ElementProps: false,
-    React$ElementConfig: false,
-    React$ElementRef: false,
   },
   env: {
+    'browser': true,
+    'node': true,
     'jest/globals': true,
   },
 };

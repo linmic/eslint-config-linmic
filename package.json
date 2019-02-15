@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-linmic",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Linmic's ESLint Config",
   "main": "index.js",
   "scripts": {

@@ -4,7 +4,7 @@
   "description": "Linmic's ESLint Config",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint .",
+    "lint": "eslint -c index.js .",
     "prettify": "prettier --write ./**/*.js"
   },
   "repository": {
@@ -24,11 +24,12 @@
     "node": ">= 4"
   },
   "dependencies": {
-    "eslint-config-airbnb": "^15.1.0"
+    "eslint-config-airbnb": "^15.1.0",
+    "eslint-config-prettier": "^4.0.0"
   },
   "peerDependencies": {
-    "babel-eslint": "^8.0.0",
-    "eslint": "4.13",
+    "babel-eslint": "^10.0.1",
+    "eslint": "4.13.0",
     "eslint-plugin-flowtype": "^2.35.1",
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-jest": "^21.1.0",
@@ -38,6 +39,15 @@
     "eslint-plugin-testcafe": "^0.2.1"
   },
   "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint": "4.13.0",
+    "eslint-plugin-flowtype": "^2.35.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jest": "^21.1.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "^7.1.0",
+    "eslint-plugin-security": "^1.4.0",
+    "eslint-plugin-testcafe": "^0.2.1",
     "prettier": "^1.11.1"
   }
 }

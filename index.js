@@ -1,6 +1,13 @@
 module.exports = {
   parser: 'babel-eslint',
-  extends: ['airbnb', 'plugin:testcafe/recommended'],
+  extends: [
+    'airbnb',
+    'plugin:testcafe/recommended',
+    'prettier',
+    'prettier/babel',
+    'prettier/flowtype',
+    'prettier/react',
+  ],
   plugins: ['flowtype', 'security', 'jest', 'testcafe'],
   settings: {
     'import/resolver': {
@@ -8,8 +15,8 @@ module.exports = {
         config: 'webpack.config.js',
       },
     },
-    'flowtype': {
-      'onlyFilesWithFlowAnnotation': false
+    flowtype: {
+      onlyFilesWithFlowAnnotation: false,
     },
   },
   rules: {
@@ -51,8 +58,8 @@ module.exports = {
     SyntheticEvent: true,
   },
   env: {
-    'browser': true,
-    'node': true,
+    browser: true,
+    node: true,
     'jest/globals': true,
   },
 };

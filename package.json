@@ -19,7 +19,7 @@
     "styleguide"
   ],
   "author": "Linmic <linmicya@gmail.com>",
-  "license": "All rights reserved.",
+  "license": "UNLICENSED",
   "engines": {
     "node": ">= 4"
   },
